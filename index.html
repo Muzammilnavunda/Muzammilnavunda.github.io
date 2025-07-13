@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohammed Muzammil</title>
+  <style>
+    :root {
+      --primary: #1c1c1c;
+      --accent: #4caf50;
+      --light: #f5f5f5;
+      --dark: #121212;
+      --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--accent);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      opacity: 0.8;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: var(--dark);
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #3e8e41;
+    }
+
+    .about,
+    .influencer,
+    .islamic {
+      background: var(--primary);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .socials a {
+      color: var(--light);
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #111;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mohammed Muzammil</h1>
+    <p>Student | Social Media Influencer | Islamic Scholar</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#influencer">Influencer Life</a>
+    <a href="#islamic">Islamic Work</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Welcome to My Personal Space</h2>
+    <p>Exploring knowledge, sharing positivity, and living with purpose.</p>
+    <button class="btn" onclick="scrollToSection('about')">Learn More</button>
+  </section>
+
+  <section id="about" class="about">
+    <h3>About Me</h3>
+    <p>I’m a passionate student at MBA Management Studies, constantly learning, growing, and connecting with people. I believe in the power of positive influence, grounded in strong values and purpose.</p>
+  </section>
+
+  <section id="influencer" class="influencer">
+    <h3>As a Social Media Influencer</h3>
+    <p>With a growing online presence, I create content that uplifts, informs, and inspires. Whether it’s lifestyle, productivity, or motivational insights — I aim to leave a meaningful impact.</p>
+    <div class="socials">
+      <a href="https://instagram.com/" target="_blank" title="Instagram">📷</a>
+      <a href="https://twitter.com/" target="_blank" title="Twitter">🐦</a>
+      <a href="https://youtube.com/" target="_blank" title="YouTube">▶️</a>
+    </div>
+  </section>
+
+  <section id="islamic" class="islamic">
+    <h3>Islamic Scholarship</h3>
+    <p>Rooted in deep study and love for Islamic knowledge, I actively share reflections, teachings, and insights from the Quran and Hadith, aiming to guide myself and others toward a better path.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Mohammed Muzammil. All rights reserved.
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
+</html>
