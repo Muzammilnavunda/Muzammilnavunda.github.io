@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohammed Muzammil</title>
+  <style>
+    :root {
+      --main-bg: #fdfaf6;
+      --primary: #2c3e50;
+      --accent: #16a085;
+      --text: #333;
+      --light-text: #666;
+      --soft-border: #eaeaea;
+      --highlight: #f9f3ec;
+      --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--main-bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--highlight);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--soft-border);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--light-text);
+    }
+
+    nav {
+      background: white;
+      text-align: center;
+      padding: 1rem;
+      border-bottom: 1px solid var(--soft-border);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    .bio {
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      flex: 1 1 250px;
+      background: white;
+      border: 1px solid var(--soft-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .socials {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--highlight);
+      border-top: 1px solid var(--soft-border);
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: var(--primary);
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1rem;
+      color: var(--light-text);
+    }
+
+    /* Subtle fade-in effect */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mohammed Muzammil</h1>
+    <p>MBA Student • Social Media Influencer • Islamic Scholar</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#journey">Journey</a>
+    <a href="#social">Connect</a>
+  </nav>
+
+  <section id="about" data-animate>
+    <h2>About Me</h2>
+    <p class="bio">
+      I’m <strong>Mohammed Muzammil</strong>, currently pursuing my MBA in Management Studies. Alongside my academic pursuits, I engage actively as a content creator and influencer across social media platforms. With a deep passion for Islamic knowledge and da'wah, I also share insights and teachings as an <strong>Islamic scholar</strong>, aiming to bring clarity, positivity, and purpose to people’s lives.
+    </p>
+  </section>
+
+  <section id="journey" data-animate>
+    <h2>My Journey</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Academic</h3>
+        <p>Currently pursuing an MBA in Management Studies with a focus on leadership, business ethics, and strategic innovation.</p>
+      </div>
+      <div class="card">
+        <h3>Social Media Influence</h3>
+        <p>Building a strong and positive digital presence on platforms like Instagram, YouTube, and X, inspiring youth with faith and purpose.</p>
+      </div>
+      <div class="card">
+        <h3>Islamic Studies</h3>
+        <p>Grounded in classical Islamic education, I focus on delivering relatable, authentic, and spiritually uplifting content.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="social" data-animate>
+    <h2>Connect With Me</h2>
+    <div class="socials">
+      <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+      <a href="https://youtube.com" target="_blank" title="YouTube">📺</a>
+      <a href="https://x.com" target="_blank" title="Twitter / X">🐦</a>
+      <a href="mailto:muzammil@example.com" title="Email">✉️</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Mohammed Muzammil. All rights reserved.
+  </footer>
+
+  <script>
+    // Fade-in animation on scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('[data-animate]').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
